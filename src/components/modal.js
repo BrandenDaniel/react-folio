@@ -21,7 +21,8 @@ const Modal = (props) => {
           key={item.id}
         >
           <h3>{item.title}</h3>
-
+          <h4>The project</h4>
+          <p>{item.desc}</p>
           <div className="portfolio-modal__snapshots">
             {item.snapshot.map((snapshot) => (
               <img src={require(`../assets/images/${snapshot}`)} alt="" />
