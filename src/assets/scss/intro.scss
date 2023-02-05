@@ -1,0 +1,275 @@
+@import "_variables.scss";
+
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box !important;
+}
+
+body,
+html {
+  font-size: 16px !important;
+}
+
+.canvas {
+  background-color: $peach;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+}
+
+img:hover {
+  cursor: default;
+}
+
+.intro {
+  max-width: 380px;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__content {
+    padding: 30px;
+
+    h1 {
+      margin: 0;
+      overflow: hidden;
+
+      span {
+        color: #e31b6d;
+        position: relative;
+        background: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(#dd2476),
+          to(#ff512f)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &::after {
+          content: "";
+          height: 7px;
+          width: 100%;
+          background-color: #ff512f;
+          position: absolute;
+          bottom: 8px;
+          margin-left: 6px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 25px;
+
+    &__work {
+      justify-content: flex-end;
+      &::after {
+        content: "View Portfolio";
+      }
+
+      &:hover:before {
+        left: 100%;
+      }
+    }
+
+    &__contact {
+      &::after {
+        content: "Get In Touch";
+      }
+
+      &:hover::before {
+        left: -100% !important;
+      }
+    }
+
+    > span {
+      display: flex;
+      align-items: center;
+      border-radius: 100px;
+      padding: 0 20px;
+      height: 58px;
+      margin: 8px 0;
+      position: relative;
+      font-size: 1rem;
+      line-height: 1;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: calc(100% - 4px * 2);
+        height: calc(100% - 4px * 2);
+        z-index: 1;
+        background: $peach;
+        border-radius: 100px;
+        transition: 0.25s ease-in-out;
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color: #000;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .emoji {
+        z-index: 2;
+        color: #000 !important;
+        animation: rock 1.5s infinite;
+        display: inline-block;
+      }
+
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#dd2476),
+        to(#ff512f)
+      );
+      background-image: -webkit-gradient(
+        linear,
+        0% 0%,
+        100% 0%,
+        from(rgb(221, 36, 118)),
+        to(rgb(255, 81, 47))
+      );
+
+      &:hover {
+        cursor: pointer;
+
+        .emoji,
+        &::after {
+          color: $peach !important;
+        }
+      }
+    }
+  }
+}
+
+@keyframes contact-link-over-in {
+  0% {
+    bottom: 0;
+    height: 2px;
+    width: 2px;
+  }
+
+  33% {
+    bottom: 0;
+    height: 100%;
+    width: 2px;
+  }
+
+  50% {
+    bottom: 0;
+    height: 100%;
+    width: 2px;
+  }
+
+  100% {
+    bottom: 0;
+    height: 100%;
+    width: calc(100% + 24px);
+  }
+}
+
+@keyframes contact-link-over-out {
+  0% {
+    bottom: 0;
+    height: 100%;
+    width: calc(100% + 24px);
+  }
+
+  33% {
+    bottom: 0;
+    height: 100%;
+    width: 2px;
+  }
+
+  50% {
+    bottom: 0;
+    height: 100%;
+    width: 2px;
+  }
+
+  80% {
+    bottom: -3px;
+    height: 5px;
+    width: 5x;
+  }
+
+  100% {
+    bottom: -3px;
+    height: 5px;
+    width: 15px;
+  }
+}
+
+@keyframes rock {
+  0% {
+    margin: 0;
+  }
+
+  25% {
+    margin: 0 10px 0 0;
+  }
+
+  50% {
+    margin: 0;
+  }
+
+  75% {
+    margin: 0 0 0 10px;
+  }
+
+  100% {
+    margin: 0;
+  }
+}
+
+@keyframes back-btn {
+  0% {
+    margin: 0 0 0 -15px;
+  }
+
+  50% {
+    margin: 0 -15px 0 0;
+  }
+
+  100% {
+    margin: 0 0 0 -15px;
+  }
+}
+
+@media (min-width: $md) {
+  body,
+  html {
+    font-size: 17px !important;
+  }
+
+  .intro {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: $lg) {
+  body,
+  html {
+    font-size: 18px !important;
+  }
+}
