@@ -1,3 +1,5 @@
+import Modal from "./modal";
+
 const PortfolioList = (props) => {
   const list = props.list;
 
@@ -6,13 +8,11 @@ const PortfolioList = (props) => {
       .querySelector(`.portfolio-modal`)
       .classList.add(`portfolio-modal--open`);
 
+    document.querySelector(`.portfolio`).classList.add(`portfolio--dark-bg`);
+
     document
       .querySelector(`.portfolio-modal__${id}`)
       .classList.add(`portfolio-modal__content--open`);
-
-    // document
-    //   .querySelector(`.portfolio-modal__${list.id}`)
-    //   .classList.add("portfolio-modal--open");
   }
 
   return (
@@ -37,6 +37,8 @@ const PortfolioList = (props) => {
           </div>
         </div>
       ))}
+
+      <Modal list={list} />
     </div>
   );
 };

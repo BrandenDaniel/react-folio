@@ -43,6 +43,7 @@ img:hover {
     h1 {
       margin: 0;
       overflow: hidden;
+      line-height: 2.5rem;
 
       span {
         color: #e31b6d;
@@ -59,7 +60,7 @@ img:hover {
 
         &::after {
           content: "";
-          height: 7px;
+          height: 8px;
           width: 100%;
           background-color: #ff512f;
           position: absolute;
