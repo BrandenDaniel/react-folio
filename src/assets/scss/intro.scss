@@ -29,7 +29,7 @@ img:hover {
 }
 
 .intro {
-  max-width: 380px;
+  max-width: 385px;
   width: 100%;
   margin: 0 auto;
   position: absolute;
@@ -44,6 +44,8 @@ img:hover {
       margin: 0;
       overflow: hidden;
       line-height: 2.5rem;
+      font-weight: 700;
+      font-size: 2rem;
 
       span {
         color: #e31b6d;
@@ -60,11 +62,11 @@ img:hover {
 
         &::after {
           content: "";
-          height: 8px;
+          height: 7px;
           width: 100%;
           background-color: #ff512f;
           position: absolute;
-          bottom: 8px;
+          bottom: 9px;
           margin-left: 6px;
           border-radius: 10px;
         }
@@ -73,12 +75,16 @@ img:hover {
   }
 
   &__btn {
-    margin-top: 25px;
+    margin-top: 10px;
+
+    svg {
+      z-index: 1;
+    }
 
     &__work {
       justify-content: flex-end;
       &::after {
-        content: "View Portfolio";
+        content: "Portfolio";
       }
 
       &:hover:before {
@@ -88,7 +94,7 @@ img:hover {
 
     &__contact {
       &::after {
-        content: "Get In Touch";
+        content: "Get in touch";
       }
 
       &:hover::before {
@@ -100,8 +106,8 @@ img:hover {
       display: flex;
       align-items: center;
       border-radius: 100px;
-      padding: 0 20px;
-      height: 58px;
+      padding: 0 25px;
+      height: 65px;
       margin: 8px 0;
       position: relative;
       font-size: 1rem;
@@ -129,7 +135,7 @@ img:hover {
         z-index: 1;
         color: #000;
         font-weight: 600;
-        font-size: 1rem;
+        font-size: 1.15rem;
       }
 
       .emoji {
@@ -137,6 +143,7 @@ img:hover {
         color: #000 !important;
         animation: rock 1.5s infinite;
         display: inline-block;
+        font-size: 1.2rem;
       }
 
       background: -webkit-gradient(
@@ -157,7 +164,7 @@ img:hover {
       &:hover {
         cursor: pointer;
 
-        .emoji,
+        svg,
         &::after {
           color: $peach !important;
         }
@@ -267,7 +274,13 @@ img:hover {
   }
 
   .intro {
-    max-width: 400px;
+    max-width: 425px;
+
+    &__content {
+      h1 {
+        font-size: 2.15rem;
+      }
+    }
   }
 }
 

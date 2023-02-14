@@ -1,5 +1,9 @@
 import "../assets/scss/intro.scss";
 import "../assets/scss/contact.scss";
+import { mdiArrowTopRightBoldOutline } from "@mdi/js";
+import { mdiArrowBottomLeftBoldOutline } from "@mdi/js";
+
+import Icon from "@mdi/react";
 import React from "react";
 
 function viewWork() {
@@ -23,10 +27,10 @@ function Intro() {
         </h1>
         <div className="intro__btn">
           <span className="intro__btn__work" onClick={viewWork}>
-            <span className="emoji">👉</span>
+            <Icon path={mdiArrowTopRightBoldOutline} size={1.1} />
           </span>
           <span className="intro__btn__contact" onClick={viewContact}>
-            <span className="emoji">👈</span>
+            <Icon path={mdiArrowBottomLeftBoldOutline} size={1.1} />
           </span>
         </div>
       </div>

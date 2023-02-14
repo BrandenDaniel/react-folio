@@ -10,33 +10,8 @@
   transition: 0.5s ease-in-out;
   background-color: $peach;
 
-  &::after {
-    content: "";
-    background: rgba(0, 0, 0, 0);
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
   &--open {
     right: 0;
-  }
-
-  &--dark-bg {
-    &::after {
-      transition: 0.5s ease-in-out;
-      content: "";
-      background: rgba(0, 0, 0, 0.3);
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
   }
 
   &__back {
