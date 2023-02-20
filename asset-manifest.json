@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-folio/static/css/main.05c7371a.css",
-    "main.js": "/react-folio/static/js/main.61a8464d.js",
+    "main.css": "/react-folio/static/css/main.ae2cd85d.css",
+    "main.js": "/react-folio/static/js/main.47bd4ba6.js",
     "static/js/787.612b19a2.chunk.js": "/react-folio/static/js/787.612b19a2.chunk.js",
     "static/media/kader-home.png": "/react-folio/static/media/kader-home.989496ac399805197e75.png",
     "static/media/kader-about.png": "/react-folio/static/media/kader-about.6df5560656c19346b8ab.png",
@@ -38,12 +38,12 @@
     "static/media/mskims.png": "/react-folio/static/media/mskims.82e205ebf34f55a2cff8.png",
     "static/media/perfectcottonlogo.png": "/react-folio/static/media/perfectcottonlogo.6cf97d1580b0b5702762.png",
     "index.html": "/react-folio/index.html",
-    "main.05c7371a.css.map": "/react-folio/static/css/main.05c7371a.css.map",
-    "main.61a8464d.js.map": "/react-folio/static/js/main.61a8464d.js.map",
+    "main.ae2cd85d.css.map": "/react-folio/static/css/main.ae2cd85d.css.map",
+    "main.47bd4ba6.js.map": "/react-folio/static/js/main.47bd4ba6.js.map",
     "787.612b19a2.chunk.js.map": "/react-folio/static/js/787.612b19a2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05c7371a.css",
-    "static/js/main.61a8464d.js"
+    "static/css/main.ae2cd85d.css",
+    "static/js/main.47bd4ba6.js"
   ]
 }
