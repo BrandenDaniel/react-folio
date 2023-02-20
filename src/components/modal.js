@@ -32,7 +32,7 @@ const Modal = (props) => {
             </span>
           </h3>
           <h4>The project</h4>
-          <div class="portfolio-modal__desc">
+          <div className="portfolio-modal__desc">
             <p>{item.desc}</p>
             <div>
               <h5>Build stack</h5>

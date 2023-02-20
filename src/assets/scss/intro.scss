@@ -1,4 +1,5 @@
 @import "_variables.scss";
+@import "_mixins.scss";
 
 * {
   font-family: "Open Sans", sans-serif;
@@ -64,7 +65,7 @@ img:hover {
           content: "";
           height: 7px;
           width: 100%;
-          background-color: #ff512f;
+          background-color: $orangeish;
           position: absolute;
           bottom: 9px;
           margin-left: 6px;
@@ -83,22 +84,48 @@ img:hover {
 
     &__work {
       justify-content: flex-end;
-      &::after {
-        content: "Portfolio";
+
+      svg {
+        color: $orangeish;
       }
 
-      &:hover:before {
-        left: 100%;
+      &::after {
+        content: "Portfolio";
       }
     }
 
     &__contact {
+      animation: contact-toggle-reverse 0.5s forwards;
+
+      svg {
+        color: $reddish;
+      }
+
       &::after {
         content: "Get in touch";
       }
 
-      &:hover::before {
-        left: -100% !important;
+      &--open {
+        // height: auto !important;
+        // padding: 25px !important;
+        border-radius: 20px !important;
+        border: none !important;
+        animation: contact-toggle 0.3s forwards;
+
+        @include gradient;
+
+        &::before {
+          display: none;
+        }
+
+        svg,
+        &::after {
+          display: none;
+        }
+
+        .contact {
+          display: flex;
+        }
       }
     }
 
@@ -107,45 +134,15 @@ img:hover {
       align-items: center;
       border-radius: 100px;
       padding: 0 25px;
-      height: 65px;
-      margin: 8px 0;
+      min-height: 65px;
+      margin: 6px 0;
       position: relative;
       font-size: 1rem;
       line-height: 1;
       overflow: hidden;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 4px;
-        left: 4px;
-        width: calc(100% - 4px * 2);
-        height: calc(100% - 4px * 2);
-        z-index: 1;
-        background: $peach;
-        border-radius: 100px;
-        transition: 0.25s ease-in-out;
-      }
-
-      &::after {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        color: #000;
-        font-weight: 600;
-        font-size: 1.15rem;
-      }
-
-      .emoji {
-        z-index: 2;
-        color: #000 !important;
-        animation: rock 1.5s infinite;
-        display: inline-block;
-        font-size: 1.2rem;
-      }
-
+      border: 4px solid transparent;
+      border-left-color: $reddish;
+      border-right-color: $orangeish;
       background: -webkit-gradient(
         linear,
         left top,
@@ -161,13 +158,48 @@ img:hover {
         to(rgb(255, 81, 47))
       );
 
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 400px;
+        z-index: 1;
+        background: $peach;
+        border-radius: 50%;
+        transition: 0.4s ease-in-out;
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color: #000;
+        font-weight: 600;
+        font-size: 1.15rem;
+        transition: 0.4s ease-in-out;
+      }
+
       &:hover {
         cursor: pointer;
+
+        &::before {
+          width: 0;
+          height: 0;
+        }
 
         svg,
         &::after {
           color: $peach !important;
         }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
@@ -195,7 +227,7 @@ img:hover {
   100% {
     bottom: 0;
     height: 100%;
-    width: calc(100% + 24px);
+    width: calc(100% + 35px);
   }
 }
 
@@ -203,7 +235,7 @@ img:hover {
   0% {
     bottom: 0;
     height: 100%;
-    width: calc(100% + 24px);
+    width: calc(100% + 35px);
   }
 
   33% {
@@ -264,6 +296,34 @@ img:hover {
 
   100% {
     margin: 0 0 0 -15px;
+  }
+}
+
+@keyframes contact-toggle {
+  0% {
+    padding: 30px;
+    height: 65px;
+    border-radius: 100px;
+  }
+
+  100% {
+    padding: 30px;
+    height: 150px;
+    border-radius: 20px;
+  }
+}
+
+@keyframes contact-toggle-reverse {
+  0% {
+    padding: 30px;
+    height: 150px;
+    border-radius: 20px;
+  }
+
+  100% {
+    padding: 30px;
+    height: 65px;
+    border-radius: 100px;
   }
 }
 

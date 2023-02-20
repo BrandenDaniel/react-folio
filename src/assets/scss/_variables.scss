@@ -1,4 +1,6 @@
 $peach: #f7e0cf;
+$reddish: #dd2476;
+$orangeish: #ff512f;
 
 $grid-breakpoints: (
   xs: 0,
@@ -18,6 +20,8 @@ $xxl: 1400px;
 
 :export {
   peach: $peach;
+  reddish: $reddish;
+  orangeish: $orangeish;
   xs: $xs;
   sm: $sm;
   md: $md;
