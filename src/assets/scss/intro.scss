@@ -77,6 +77,7 @@ img:hover {
 
   &__btn {
     margin-top: 10px;
+    overflow: hidden;
 
     svg {
       z-index: 1;
@@ -108,9 +109,10 @@ img:hover {
       &--open {
         // height: auto !important;
         // padding: 25px !important;
-        border-radius: 20px !important;
+        border-radius: 17px !important;
         border: none !important;
         animation: contact-toggle 0.3s forwards;
+        justify-content: center;
 
         @include gradient;
 
@@ -301,27 +303,27 @@ img:hover {
 
 @keyframes contact-toggle {
   0% {
-    padding: 30px;
+    padding: 25px;
     height: 65px;
     border-radius: 100px;
   }
 
   100% {
-    padding: 30px;
-    height: 150px;
+    padding: 25px;
+    height: 80px;
     border-radius: 20px;
   }
 }
 
 @keyframes contact-toggle-reverse {
   0% {
-    padding: 30px;
-    height: 150px;
+    padding: 25px;
+    height: 80px;
     border-radius: 20px;
   }
 
   100% {
-    padding: 30px;
+    padding: 25px;
     height: 65px;
     border-radius: 100px;
   }

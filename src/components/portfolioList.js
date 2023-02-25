@@ -1,4 +1,6 @@
 import Modal from "./modal";
+import Icon from "@mdi/react";
+import { mdiArrowTopRightThick } from "@mdi/js";
 
 const PortfolioList = (props) => {
   const list = props.list;
@@ -8,7 +10,7 @@ const PortfolioList = (props) => {
       .querySelector(`.portfolio-modal`)
       .classList.add(`portfolio-modal--open`);
 
-    document.querySelector(`.portfolio`).classList.add(`portfolio--dark-bg`);
+    document.querySelector(`.portfolio`).classList.add(`portfolio--hide-cards`);
 
     document
       .querySelector(`.portfolio-modal__${id}`)
@@ -26,13 +28,15 @@ const PortfolioList = (props) => {
             <img src={require(`../assets/images/${item.thumbnail}`)} alt="" />
           </div>
           <div className="portfolio-list__content">
+            <img src={require(`../assets/images/${item.thumbnail}`)} alt="" />
+
             <h2>{item.title}</h2>
             <span
               onClick={() => {
                 showModal(item.id);
               }}
             >
-              Learn More
+              <Icon path={mdiArrowTopRightThick} size={1.1} />
             </span>
           </div>
         </div>
