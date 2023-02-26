@@ -2,12 +2,14 @@
 @import "_mixins.scss";
 
 .contact {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
 
   &__links {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 0;
+    transition: 0.2s ease-in-out;
 
     a {
       color: $peach;

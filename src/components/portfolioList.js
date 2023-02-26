@@ -36,7 +36,10 @@ const PortfolioList = (props) => {
                 showModal(item.id);
               }}
             >
-              <Icon path={mdiArrowTopRightThick} size={1.1} />
+              Learn more
+              <span>
+                <Icon path={mdiArrowTopRightThick} size={1} />
+              </span>
             </span>
           </div>
         </div>

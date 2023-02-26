@@ -96,8 +96,6 @@ img:hover {
     }
 
     &__contact {
-      animation: contact-toggle-reverse 0.5s forwards;
-
       svg {
         color: $reddish;
       }
@@ -107,12 +105,9 @@ img:hover {
       }
 
       &--open {
-        // height: auto !important;
-        // padding: 25px !important;
-        border-radius: 17px !important;
-        border: none !important;
-        animation: contact-toggle 0.3s forwards;
+        border-radius: 15px !important;
         justify-content: center;
+        transition: 0.2s ease-in-out !important;
 
         @include gradient;
 
@@ -127,14 +122,22 @@ img:hover {
 
         .contact {
           display: flex;
+          opacity: 1;
+          pointer-events: initial;
+
+          &__links {
+            gap: 25px;
+          }
         }
       }
     }
 
     > span {
+      transition: 0.3s ease-in-out !important;
+
       display: flex;
       align-items: center;
-      border-radius: 100px;
+      border-radius: 40px;
       padding: 0 25px;
       min-height: 65px;
       margin: 6px 0;
@@ -304,27 +307,27 @@ img:hover {
 @keyframes contact-toggle {
   0% {
     padding: 25px;
-    height: 65px;
+    height: 66px;
     border-radius: 100px;
   }
 
   100% {
     padding: 25px;
-    height: 80px;
-    border-radius: 20px;
+    height: 66px;
+    border-radius: 15px;
   }
 }
 
 @keyframes contact-toggle-reverse {
   0% {
     padding: 25px;
-    height: 80px;
-    border-radius: 20px;
+    height: 66px;
+    border-radius: 15px;
   }
 
   100% {
     padding: 25px;
-    height: 65px;
+    height: 66px;
     border-radius: 100px;
   }
 }

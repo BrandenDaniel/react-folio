@@ -32,7 +32,6 @@ function Intro() {
             <Icon path={mdiArrowTopRightThick} size={1.1} />
           </span>
           <span className="intro__btn__contact" onClick={contactToggle}>
-            <Icon path={mdiArrowDownThick} size={1.1} />
             <Contact />
           </span>
         </div>
